@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'users.User'
 
 # Application definition
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.tasks.apps.TasksConfig',
     'apps.projects.apps.ProjectsConfig',
+    'apps.users.apps.UsersConfig',
     'rest_framework',
 ]
 
