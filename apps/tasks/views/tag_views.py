@@ -60,7 +60,7 @@ class TagDetailAPIView(APIView):
 
     def put(self, request: Request, pk: int) -> Response:
         tag = self.get_object(pk=pk)
-        serializer = TagSerializer(tag, data=request.data)
+        serializer = TagSerializer(instance=tag, data=request.data)
 
         if serializer.is_valid(raise_exception=True):
             serializer.save()
